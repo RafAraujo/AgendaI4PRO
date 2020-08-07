@@ -1,0 +1,18 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AgendaI4PRO.Application\AgendaI4PRO.Application.csproj" />
+    <ProjectReference Include="..\AgendaI4PRO.Data\AgendaI4PRO.Data.csproj" />
+    <ProjectReference Include="..\AgendaI4PRO.Domain\AgendaI4PRO.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="10.0.0" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="3.1.4" />
+  </ItemGroup>
+
+</Project>

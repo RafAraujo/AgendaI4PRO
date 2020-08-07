@@ -1,0 +1,110 @@
+﻿@model AgendaI4PRO.Domain.Models.Contato
+
+@{
+    ViewData["Title"] = "Cadastrar";
+}
+
+<h4>Contato</h4>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-action="Cadastrar">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-10">
+                        <label asp-for="Nome" class="control-label"></label>
+                        <input asp-for="Nome" class="form-control" />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="divEmails">
+                <div class="row">
+                    <div class="col-10">
+                        <label>Emails</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10">
+                        <input asp-for="Emails[0].Endereco" class="form-control" />
+                    </div>
+                    <div class="col-2">
+                        <input type="button" class="btn btn-success" onclick="adicionarEmail()" value=" + " />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group" id="divTelefones">
+                <div class="row">
+                    <div class="col-12">
+                        <label>Telefones</label>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-10">
+                        <input asp-for="Telefones[0].Numero" class="form-control" />
+                    </div>
+                    <div class="col-2">
+                        <input type="button" class="btn btn-success" onclick="adicionarTelefone()" value=" + " />
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Cadastrar" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-controller="Home" asp-action="Index">Voltar</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
+<script>
+    let emailIndex = 0;
+    let telefoneIndex = 0;
+
+    function adicionarEmail() {
+        emailIndex++;
+
+        let divRow = document.createElement('div');
+        divRow.classList.add('row');
+
+        let divCol = document.createElement('div');
+        divCol.classList.add('col-10');
+
+        let input = document.createElement('input');
+        input.classList.add('form-control');
+        input.id = `Emails_${emailIndex}__Endereco`;
+        input.name = `Emails[${emailIndex}].Endereco`;
+
+        divRow.appendChild(divCol);
+        divCol.appendChild(input);
+
+        let divEmails = document.getElementById('divEmails');
+        divEmails.appendChild(divRow);
+    }
+
+    function adicionarTelefone() {
+        telefoneIndex++;
+
+        let divRow = document.createElement('div');
+        divRow.classList.add('row');
+
+        let divCol = document.createElement('div');
+        divCol.classList.add('col-10');
+
+        let input = document.createElement('input');
+        input.classList.add('form-control');
+        input.id = `Telefones_${telefoneIndex}__Numero`;
+        input.name = `Telefones[${telefoneIndex}].Numero`;
+
+        divRow.appendChild(divCol);
+        divCol.appendChild(input);
+
+        let divEmails = document.getElementById('divTelefones');
+        divEmails.appendChild(divRow);
+    }
+</script>

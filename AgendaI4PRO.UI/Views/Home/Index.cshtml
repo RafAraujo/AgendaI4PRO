@@ -1,0 +1,33 @@
+﻿@model IEnumerable<AgendaI4PRO.Domain.Models.Contato>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Minha Agenda</h1>
+
+<p>
+    <a asp-controller="Contato" asp-action="Cadastrar">Novo Contato</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Contatos
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @string.Format("{0} - {1} - {2}", @item.Nome, @item.Emails?.FirstOrDefault()?.Endereco, @item.Telefones?.FirstOrDefault()?.Numero)
+            </td>
+            <td>
+                @Html.ActionLink("Delete", "Remover", "Contato", new { id = item.Id })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

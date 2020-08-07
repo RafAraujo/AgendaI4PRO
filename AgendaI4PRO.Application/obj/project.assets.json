@@ -1,0 +1,176 @@
+{
+  "version": 3,
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "FluentValidation/9.0.1": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/FluentValidation.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/FluentValidation.dll": {}
+        }
+      },
+      "LiteDB/5.0.8": {
+        "type": "package",
+        "compile": {
+          "lib/netstandard2.0/LiteDB.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/LiteDB.dll": {}
+        }
+      },
+      "AgendaI4PRO.Data/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "dependencies": {
+          "AgendaI4PRO.Domain": "1.0.0",
+          "LiteDB": "5.0.8"
+        },
+        "compile": {
+          "bin/placeholder/AgendaI4PRO.Data.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AgendaI4PRO.Data.dll": {}
+        }
+      },
+      "AgendaI4PRO.Domain/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v3.1",
+        "compile": {
+          "bin/placeholder/AgendaI4PRO.Domain.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/AgendaI4PRO.Domain.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "FluentValidation/9.0.1": {
+      "sha512": "GeF+cPknUFFJ5FkCybmQShaXWwJowBuJozgns6In37wiP2zOWx+kdNPBAN9BlDyhcORdxtXeGnkLZ+OFT85onQ==",
+      "type": "package",
+      "path": "fluentvalidation/9.0.1",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "fluentvalidation.9.0.1.nupkg.sha512",
+        "fluentvalidation.nuspec",
+        "lib/net461/FluentValidation.dll",
+        "lib/net461/FluentValidation.xml",
+        "lib/netstandard2.0/FluentValidation.dll",
+        "lib/netstandard2.0/FluentValidation.xml"
+      ]
+    },
+    "LiteDB/5.0.8": {
+      "sha512": "lqwQnweoa3Lko87uo9FzZYf6BFh3AULas5yosG95LPVHIoACtJJ2BjBPQ7d7vUYDQYSV3rUco2+vMilVoBQ3WA==",
+      "type": "package",
+      "path": "litedb/5.0.8",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "AppVeyorSettings.json",
+        "LICENSE",
+        "icon_64x64.png",
+        "lib/net45/LiteDB.dll",
+        "lib/net45/LiteDB.xml",
+        "lib/netstandard1.3/LiteDB.dll",
+        "lib/netstandard1.3/LiteDB.xml",
+        "lib/netstandard2.0/LiteDB.dll",
+        "lib/netstandard2.0/LiteDB.xml",
+        "litedb.5.0.8.nupkg.sha512",
+        "litedb.nuspec"
+      ]
+    },
+    "AgendaI4PRO.Data/1.0.0": {
+      "type": "project",
+      "path": "../AgendaI4PRO.Data/AgendaI4PRO.Data.csproj",
+      "msbuildProject": "../AgendaI4PRO.Data/AgendaI4PRO.Data.csproj"
+    },
+    "AgendaI4PRO.Domain/1.0.0": {
+      "type": "project",
+      "path": "../AgendaI4PRO.Domain/AgendaI4PRO.Domain.csproj",
+      "msbuildProject": "../AgendaI4PRO.Domain/AgendaI4PRO.Domain.csproj"
+    }
+  },
+  "projectFileDependencyGroups": {
+    ".NETCoreApp,Version=v3.1": [
+      "AgendaI4PRO.Data >= 1.0.0",
+      "AgendaI4PRO.Domain >= 1.0.0",
+      "FluentValidation >= 9.0.1"
+    ]
+  },
+  "packageFolders": {
+    "C:\\Users\\Rafael\\.nuget\\packages\\": {},
+    "C:\\Microsoft\\Xamarin\\NuGet\\": {}
+  },
+  "project": {
+    "version": "1.0.0",
+    "restore": {
+      "projectUniqueName": "C:\\Users\\Rafael\\source\\repos\\AgendaI4PRO\\AgendaI4PRO.Application\\AgendaI4PRO.Application.csproj",
+      "projectName": "AgendaI4PRO.Application",
+      "projectPath": "C:\\Users\\Rafael\\source\\repos\\AgendaI4PRO\\AgendaI4PRO.Application\\AgendaI4PRO.Application.csproj",
+      "packagesPath": "C:\\Users\\Rafael\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\Rafael\\source\\repos\\AgendaI4PRO\\AgendaI4PRO.Application\\obj\\",
+      "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Microsoft\\Xamarin\\NuGet\\"
+      ],
+      "configFilePaths": [
+        "C:\\Users\\Rafael\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+      ],
+      "originalTargetFrameworks": [
+        "netcoreapp3.1"
+      ],
+      "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "https://api.nuget.org/v3/index.json": {}
+      },
+      "frameworks": {
+        "netcoreapp3.1": {
+          "projectReferences": {
+            "C:\\Users\\Rafael\\source\\repos\\AgendaI4PRO\\AgendaI4PRO.Data\\AgendaI4PRO.Data.csproj": {
+              "projectPath": "C:\\Users\\Rafael\\source\\repos\\AgendaI4PRO\\AgendaI4PRO.Data\\AgendaI4PRO.Data.csproj"
+            },
+            "C:\\Users\\Rafael\\source\\repos\\AgendaI4PRO\\AgendaI4PRO.Domain\\AgendaI4PRO.Domain.csproj": {
+              "projectPath": "C:\\Users\\Rafael\\source\\repos\\AgendaI4PRO\\AgendaI4PRO.Domain\\AgendaI4PRO.Domain.csproj"
+            }
+          }
+        }
+      },
+      "warningProperties": {
+        "warnAsError": [
+          "NU1605"
+        ]
+      }
+    },
+    "frameworks": {
+      "netcoreapp3.1": {
+        "dependencies": {
+          "FluentValidation": {
+            "target": "Package",
+            "version": "[9.0.1, )"
+          }
+        },
+        "imports": [
+          "net461",
+          "net462",
+          "net47",
+          "net471",
+          "net472",
+          "net48"
+        ],
+        "assetTargetFallback": true,
+        "warn": true,
+        "frameworkReferences": {
+          "Microsoft.NETCore.App": {
+            "privateAssets": "all"
+          }
+        },
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+      }
+    }
+  }
+}
